@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import '../mood_custom/mood_custom_logic.dart';
 
 class MooodLightTurn extends GetView<MoodCustomLogic> {
+  const MooodLightTurn({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class MooodLightTurn extends GetView<MoodCustomLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.ucso.value)),
+              url: WebUri.uri(Uri.parse(controller.wxkhvj.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

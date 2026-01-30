@@ -11,8 +11,8 @@ class MoodCustomView extends GetView<MoodCustomLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.lvizxe.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.jovftu.value
+              ? const CircularProgressIndicator(color: Colors.black)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class MoodCustomView extends GetView<MoodCustomLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.dwuzj();
+              controller.kyot();
             },
             icon: const Icon(
               Icons.restart_alt,

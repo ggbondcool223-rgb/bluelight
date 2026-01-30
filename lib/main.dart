@@ -1,3 +1,6 @@
+import 'package:blue_light_flashlight/pages/mood_custom/mood_custom_binding.dart';
+import 'package:blue_light_flashlight/pages/mood_custom/mood_custom_view.dart';
+import 'package:blue_light_flashlight/pages/mood_light/moood_light_turn.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -58,7 +61,7 @@ class MyApp extends StatelessWidget {
             scaffoldBackgroundColor: const Color(0xFFF8FAFC),
             fontFamily: '.SF Pro Text',
           ),
-          initialRoute: '/light_home',
+          initialRoute: '/',
           getPages: LightsTool,
         );
       },
@@ -66,6 +69,11 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> LightsTool = [
+  GetPage(
+    name: '/',
+    page: () => const MoodCustomView(),
+    binding: MoodCustomBinding(),
+  ),
   GetPage(
     name: '/light_home',
     page: () => const HomeView(),
@@ -80,6 +88,10 @@ List<GetPage<dynamic>> LightsTool = [
     name: '/colorful_light',
     page: () => const ColorfulLightView(),
     binding: ColorfulLightBinding(),
+  ),
+  GetPage(
+    name: '/mood_light_turn',
+    page: () => const MooodLightTurn(),
   ),
   GetPage(
     name: '/police_light',
